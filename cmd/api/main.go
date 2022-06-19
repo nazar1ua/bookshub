@@ -16,7 +16,7 @@ type application struct {
 	config   config
 	infoLog  *log.Logger
 	errorLog *log.Logger
-	db *driver.DB
+	db       *driver.DB
 }
 
 func main() {
@@ -27,7 +27,7 @@ func main() {
 	errorLog := log.New(os.Stdout, "ERROR: ", log.Ldate|log.Ltime|log.Lshortfile)
 
 	// dsn := os.Getenv("DSN")
-	dsn := "host=localhost port=5432 user=postgres password=password dbname=bookshub sslmode=disable timezone=UTC connect_tomeout=5"
+	dsn := "host=localhost port=5432 user=postgres password=password dbname=bookshub sslmode=disable timezone=UTC connect_timeout=5"
 	db, err := driver.ConnectPostgres(dsn)
 	if err != nil {
 		log.Fatal("Неможливо підключитись до бази даних")
@@ -37,7 +37,7 @@ func main() {
 		config:   cfg,
 		infoLog:  infoLog,
 		errorLog: errorLog,
-		db: db,
+		db:       db,
 	}
 
 	err = app.serve()

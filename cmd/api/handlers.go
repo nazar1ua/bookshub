@@ -24,6 +24,7 @@ func (app *application) Login(w http.ResponseWriter, r *http.Request) {
 		payload.Error = true
 		payload.Message = "JSON неправильний, або його немає"
 		_ = app.writeJSON(w, http.StatusBadRequest, payload)
+		return
 	}
 
 	// TODO авторизувати
