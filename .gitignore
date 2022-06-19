@@ -15,4 +15,5 @@
 # vendor/
 
 # Editor directory
-.idea/
+.idea
+.vscode
