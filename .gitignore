@@ -20,4 +20,4 @@ bookshub
 .vscode/
 
 # Database directories
-.db-data/
+db-data/
