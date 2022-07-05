@@ -16,5 +16,8 @@ bookshub
 # vendor/
 
 # Editor directory
-.idea
-.vscode
+.idea/
+.vscode/
+
+# Database directories
+.db-data/
