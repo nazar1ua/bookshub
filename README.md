@@ -12,6 +12,6 @@ docker compose up -d
 ```
 5. Запустіть сервер Go
 ```shell
-go run ./cmd/api
+make start # або go run ./cmd/api
 ```
 6. Ваш сервер доступний за посиланням `localhost:8081` :tada:
