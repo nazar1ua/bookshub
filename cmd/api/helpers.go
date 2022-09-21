@@ -19,7 +19,7 @@ func (app *application) readJSON(w http.ResponseWriter, r *http.Request, data in
 
 	err = dec.Decode(&struct{}{})
 	if err != io.EOF {
-		return errors.New("JSON має вміщати тільки одне значення")
+		return errors.New("JSON має мати тільки один батьківський об'єкт")
 	}
 
 	return nil
